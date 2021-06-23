@@ -5,7 +5,7 @@
 //  Created by codestorm on 2021/7/1.
 //
 // Initializers
-//import Foundation
+import Foundation
 //
 //struct User {
 //    var username: String
@@ -30,3 +30,35 @@
 //        self.name = name
 //    }
 //}
+
+
+
+//Lazy Properties
+
+//struct FamilyTree {
+//    init() {
+//        print("Creating family tree!")
+//    }
+//}
+//
+//struct Person {
+//    var name: String
+//    lazy var familyTree = FamilyTree()
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
+
+// Static properties and methods
+
+struct Student {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let ed = Student(name: "Ed")
+let taylor = Student(name: "Taylor")
