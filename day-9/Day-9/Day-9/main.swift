@@ -4,8 +4,20 @@
 //
 //  Created by codestorm on 2021/7/1.
 //
-// Initializers
+
 import Foundation
+// Initializers
+//Initializers are special methods that provide different ways to create your struct. All structs come with one by default, called their memberwise initializer – this asks you to provide a value for each property when you create the struct.
+//
+//You can see this if we create a User struct that has one property:
+//
+//struct User {
+//    var username: String
+//}
+//When we create one of those structs, we must provide a username:
+//
+//var user = User(username: "twostraws")
+//We can provide our own initializer to replace the default one. For example, we might want to create all new users as “Anonymous” and print a message, like this:
 //
 //struct User {
 //    var username: String
@@ -13,15 +25,24 @@ import Foundation
 //    init() {
 //        username = "Anonymous"
 //        print("Creating a new user!")
-//
 //    }
 //}
+//You don’t write func before initializers, but you do need to make sure all properties have a value before the initializer ends.
 //
+//Now our initializer accepts no parameters, we need to create the struct like this:
+//
+//var user = User()
+//user.username = "twostraws"
 //var user = User()
 //user.username = "twostraws"
 
 
-//Referring to the current instance
+//Inside methods you get a special constant called self, which points to whatever instance of the struct is currently being used. This self value is particularly useful when you create initializers that have the same parameter names as your property.
+//
+//For example, if you create a Person struct with a name property, then tried to write an initializer that accepted a name parameter, self helps you distinguish between the property and the parameter – self.name refers to the property, whereas name refers to the parameter.
+//
+//Here’s that in code:
+//
 //struct Person {
 //    var name: String
 //
@@ -30,7 +51,6 @@ import Foundation
 //        self.name = name
 //    }
 //}
-
 
 
 //Lazy Properties
