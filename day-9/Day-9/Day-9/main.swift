@@ -149,3 +149,17 @@ import Foundation
 //    }
 //}
 //Another common option is public, which lets all other code use the property or method.
+
+
+
+
+
+//end
+
+
+
+
+
+
+
+
